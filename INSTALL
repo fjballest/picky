@@ -1,0 +1,10 @@
+For UNIX and Windows use Makefile
+(Windows requires cygwin)
+
+For Plan 9 use mkfile
+
+mk all: compile everything
+mk install: install pick and pam
+mk test: regression testing
+
+libbio libfmt and libutf are used only in UNIX and Windows

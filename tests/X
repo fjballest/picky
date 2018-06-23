@@ -1,0 +1,14 @@
+#!/bin/rc
+x=$*
+if(~ $#x 0)
+	x = $file
+if(! ~ $D '')
+	D=-^$D
+
+for(z in $x){
+	test -e 8.pick && 8.pick $D $z >[2=1]
+	test -e ../8.pick &&  ../8.pick $D $z >[2=1]
+	echo
+	echo
+}
+exit ''

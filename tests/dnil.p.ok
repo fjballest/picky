@@ -1,0 +1,6 @@
+stack trace at:
+main() pid 0	pc 0x00000a dnil.p:23
+	local variables:
+	w = nil
+
+ok

@@ -1,0 +1,4 @@
+debian/input/pam /bin
+debian/input/pick /bin
+debian/input/picky128.png /usr/share/icons/hicolor/128x128/mimetypes
+debian/copyright /usr/share/doc/picky

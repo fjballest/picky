@@ -1,0 +1,16 @@
+Source: picky
+Section: languages
+Priority: optional
+Maintainer: LSUB <lsub@lsub.org>
+Build-Depends: debhelper (>= 5), make, bison
+Standards-Version: 1.1.0001-__VERS__
+Homepage: http://lsub.org/picky
+
+Package: picky
+Architecture: i386
+Depends:
+Replaces:
+Description: Simple imperative compiled programming language for programming 101 classes.
+ Picky is a simple imperative programming languages developed for teaching. It consists of a
+ compiler, pick and a bytecode interpreter, pam. For a more detailed description of the language
+ read the white paper at http://lsub.org/ls/picky.html.

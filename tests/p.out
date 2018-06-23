@@ -1,0 +1,45 @@
+#!/bin/pam
+entry 0
+types 6
+0 bool b  0 1 2 4 0
+1 char c  0 255 256 4 0
+2 int i  -2147483646 2147483647 0 4 0
+3 float r  0 0 0 4 0
+4 $nil p  0 0 0 8 0
+5 file f  0 0 0 4 0
+vars 10
+Maxint 2 0x0 2147483647 zero.p 4
+Minint 2 0x4 0 zero.p 4
+Eol 1 0x8 10 zero.p 4
+Cr 1 0xc 13 zero.p 4
+Eof 1 0x10 255 zero.p 4
+Tab 1 0x14 9 zero.p 4
+Esc 1 0x18 27 zero.p 4
+Nul 1 0x1c 0 zero.p 4
+stdin 5 0x20 - zero.p 4
+stdout 5 0x24 - zero.p 4
+procs 1
+0 main 0x000 0 1 0 0 4 zero.p 6
+x 2 0x0 - zero.p 10
+text 23
+# main()
+# {...}
+# %x: int = 0
+00000	push	0x00000000	# 0;
+00002	lvar	0x00000000	# %x: int;
+00004	sto	0x00000002
+# fwrite(stdout: file, /(43, %x: int))
+00006	lvar	0x00000000	# %x: int;
+00008	ind	0x00000004
+0000a	push	0x0000002b	# 43;
+0000c	div	
+0000d	daddr	0x00000024	# stdout: file;
+0000f	ind	0x00000004
+00011	push	0x00000002
+00013	call	0x8000000e	# fwrite();
+# return <nil>
+00015	ret	0x00000000
+pcs 3
+00000	zero.p	9
+00006	zero.p	10
+00015	zero.p	12

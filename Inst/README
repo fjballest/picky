@@ -1,0 +1,16 @@
+For windows:
+	install cygwin (with mingw inside)
+	install nullsoft NSIS in the default place
+	inside cygwin go to picky root, run make
+	inside win run make
+
+For linux (debian-based):
+	need debhelper, bison, gcc, make
+	apt-get install build-essential bison
+	go to picky root run make
+	go to linux, run make
+
+
+TODO:
+	add a nonportable done() function for windows so that programs wait.
+	the only thing it has to do is read.
